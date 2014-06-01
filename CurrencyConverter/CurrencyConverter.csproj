@@ -65,10 +65,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ControlTest.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlTest.aspx.cs">
+      <DependentUpon>ControlTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTest.aspx.designer.cs">
+      <DependentUpon>ControlTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CurrenciesData.cs" />
     <Compile Include="ICurrencyData.cs" />
     <Compile Include="Index.aspx.cs">
@@ -79,6 +87,12 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextWithCaptionControl\TextWithCaptionControl.csproj">
+      <Project>{068a6132-2195-41d5-9f94-c8395a96f148}</Project>
+      <Name>TextWithCaptionControl</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
